@@ -51,6 +51,7 @@ export interface ProjectData {
   description: string;
   github?: string;
   link?: string;
+  id: string;
 }
 
 export interface SkillsData {

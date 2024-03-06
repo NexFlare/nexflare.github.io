@@ -1,6 +1,11 @@
 import React, { FC } from "react";
 import { GeneralInfo } from "../../types";
 import styles from "./ContactForm.module.css";
+import {
+  CALL_BTN_CLICKED,
+  EMAIL_CLICKED,
+  analyseBtnClicked,
+} from "../../utils/clickAnanlytics";
 
 export interface ContactFormProps {
   generalInfo: GeneralInfo;
@@ -18,6 +23,7 @@ export const ContactForm: FC<ContactFormProps> = ({ generalInfo }) => {
         <a
           href={`mailto:${generalInfo.email}`}
           className={`${styles["email-container"]} transition flex items-center rounded-md px-4 py-3 mb-4 md:mr-8 ring-1 ring-white hover:bg-gray-900`}
+          onClick={() => analyseBtnClicked(EMAIL_CLICKED)}
         >
           <img
             src="/images/email.svg"
@@ -31,6 +37,7 @@ export const ContactForm: FC<ContactFormProps> = ({ generalInfo }) => {
         <a
           href={`tel:${generalInfo.phone}`}
           className={`${styles["phone-container"]} flex items-center rounded-md px-4 py-3 mb-4 ring-1 ring-white hover:bg-gray-900`}
+          onClick={() => analyseBtnClicked(CALL_BTN_CLICKED)}
         >
           <img
             src="/images/phone.svg"

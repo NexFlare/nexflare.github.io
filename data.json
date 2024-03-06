@@ -136,12 +136,14 @@
       {
         "name": "Quick Fix",
         "description": "An online platform aimed at streamlining the student-Teaching Assistant (TA) interaction.",
-        "github": "https://github.com/NexFlare/Quick-Fix"
+        "github": "https://github.com/NexFlare/Quick-Fix",
+        "id": "quick_fix"
       },
       {
         "name": "The Blog App",
         "description": "A full-stack tourist blogging platform that connects travellers with untapped locations that are not commonly visited by tourists",
-        "github": "https://github.com/NexFlare/The-Blog-App"
+        "github": "https://github.com/NexFlare/The-Blog-App",
+        "id": "the_blog_app"
       }
     ]
   },

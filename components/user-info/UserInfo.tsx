@@ -2,6 +2,11 @@ import { FC } from "react";
 import { useStaticHeight } from "../../hooks/useStaticHeight";
 import { GeneralInfo } from "../../types";
 import styles from "./UserInfo.module.css";
+import {
+  CONTACT_BTN,
+  SOCIAL_BTN,
+  analyseBtnClicked,
+} from "../../utils/clickAnanlytics";
 
 export interface UserInfoProps {
   info: GeneralInfo;
@@ -11,6 +16,7 @@ export const UserInfo: FC<UserInfoProps> = ({ info }) => {
   const height = useStaticHeight();
 
   const onContactMeClick = () => {
+    analyseBtnClicked(CONTACT_BTN);
     document
       .getElementById("contact-me")
       .scrollIntoView({ behavior: "smooth" });
@@ -45,6 +51,9 @@ export const UserInfo: FC<UserInfoProps> = ({ info }) => {
                   height="32px"
                   width="32px"
                   alt={item.name}
+                  onClick={() => {
+                    analyseBtnClicked(`${item.name}${SOCIAL_BTN}`);
+                  }}
                 />
               </a>
             );

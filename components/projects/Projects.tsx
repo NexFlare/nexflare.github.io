@@ -1,5 +1,9 @@
 import { FC } from "react";
 import { ProjectsData } from "../../types";
+import {
+  PROJECT_CLICKED,
+  analyseBtnClicked,
+} from "../../utils/clickAnanlytics";
 
 export type ProjectsProps = {
   data: ProjectsData;
@@ -33,6 +37,9 @@ export const Projects: FC<ProjectsProps> = ({ data }) => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="transition flex bg-white-700 px-2 py-1 rounded-md items-center ml-4 hover:bg-black hover:bg-opacity-20"
+                      onClick={() => {
+                        analyseBtnClicked(`${item.id}${PROJECT_CLICKED}`);
+                      }}
                     >
                       <img
                         src="/images/github.svg"
