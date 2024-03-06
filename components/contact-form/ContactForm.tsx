@@ -42,7 +42,7 @@ export const ContactForm: FC<ContactFormProps> = ({ generalInfo }) => {
           </div>
         </a>
       </div>
-      <form
+      {/* <form
         className="p-4 pt-6 flex flex-col border rounded-md relative"
         onSubmit={handleSubmit}
       >
@@ -66,7 +66,7 @@ export const ContactForm: FC<ContactFormProps> = ({ generalInfo }) => {
           placeholder="Message"
         />
         <button className="btn">Submit</button>
-      </form>
+      </form> */}
     </div>
   );
 };
