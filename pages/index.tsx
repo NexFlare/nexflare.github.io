@@ -1,5 +1,5 @@
 import { GetStaticProps } from "next";
-import React, { FC } from "react";
+import React, { FC, useEffect } from "react";
 import { ContactForm } from "../components/contact-form/ContactForm";
 import { Education } from "../components/education/Education";
 import { Experience } from "../components/experience/Experience";
@@ -9,6 +9,7 @@ import { UserInfo } from "../components/user-info/UserInfo";
 import { PortfolioData } from "../types";
 import { getPortfolioData } from "../utils/get-portfilio-data";
 import Head from "next/head";
+import { pageLoadEvent } from "../utils/clickAnanlytics";
 
 export interface HomeProps {
   portfolioData: PortfolioData;
@@ -16,6 +17,10 @@ export interface HomeProps {
 
 export const Home: FC<HomeProps> = ({ portfolioData }) => {
   const { user, projects, experience, education, skills } = portfolioData;
+
+  useEffect(() => {
+    pageLoadEvent();
+  }, []);
 
   return (
     <div>
