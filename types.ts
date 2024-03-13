@@ -9,6 +9,7 @@ export interface GeneralInfo {
     link: string;
     icon: string;
   }[];
+  resume: string;
 }
 
 export interface ExperienceData {

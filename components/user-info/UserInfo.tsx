@@ -4,6 +4,7 @@ import { GeneralInfo } from "../../types";
 import styles from "./UserInfo.module.css";
 import {
   CONTACT_BTN,
+  RESUME_BTN,
   SOCIAL_BTN,
   analyseBtnClicked,
 } from "../../utils/clickAnanlytics";
@@ -20,6 +21,11 @@ export const UserInfo: FC<UserInfoProps> = ({ info }) => {
     document
       .getElementById("contact-me")
       .scrollIntoView({ behavior: "smooth" });
+  };
+
+  const handleResumeClicked = () => {
+    analyseBtnClicked(RESUME_BTN);
+    window.open(info.resume, "_blank");
   };
 
   return (
@@ -59,9 +65,14 @@ export const UserInfo: FC<UserInfoProps> = ({ info }) => {
             );
           })}
         </div>
-        <button className="btn" onClick={onContactMeClick}>
-          Contact Me
-        </button>
+        <div className="mb-8">
+          <button className="btn mr-6" onClick={onContactMeClick}>
+            Contact Me
+          </button>
+          <button className="btn mt-4 sm:mt-0" onClick={handleResumeClicked}>
+            Show Resume
+          </button>
+        </div>
       </div>
     </>
   );
