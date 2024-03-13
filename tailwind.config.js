@@ -1,4 +1,5 @@
 const colors = require("tailwindcss/colors");
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   jit: true,
@@ -9,7 +10,12 @@ module.exports = {
       ...colors,
       accent: "#3898FF",
     },
-    extend: {},
+    extend: {
+      screens: {
+        xxs: "280px",
+        ...defaultTheme,
+      },
+    },
   },
   variants: {
     extend: {
