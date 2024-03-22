@@ -179,10 +179,6 @@
         "icon": "/images/docker.svg"
       },
       {
-        "name": "Kubernetes",
-        "icon": "/images/kubernetes.svg"
-      },
-      {
         "name": "SQL",
         "icon": "/images/database.svg"
       },

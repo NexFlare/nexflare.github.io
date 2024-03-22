@@ -27,7 +27,7 @@ export const Skills: FC<SkillsProps> = ({ data }) => {
         })}
       </div>
       <p className="w-full text-center text-sm text-gray-500">
-        and more<span className="tracking-wideer">...</span>
+        and constantly learning more<span className="tracking-wideer">...</span>
       </p>
     </div>
   );
