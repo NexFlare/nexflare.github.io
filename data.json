@@ -135,6 +135,12 @@
     "summary": "I have a Bacehlor's in Computer Science and a Master's in Software Engineering. During the course of my academics I have built many projects and done a handful of internships.",
     "projects": [
       {
+        "name": "HTTP Server",
+        "description": "A HTTP server from scratch in Golang that's capable of handling simple GET/POST requests, serving files and handling multiple concurrent connections.",
+        "github": "https://github.com/NexFlare/build-http-server-go",
+        "id": "http_server"
+      },
+      {
         "name": "Quick Fix",
         "description": "An online platform aimed at streamlining the student-Teaching Assistant (TA) interaction.",
         "github": "https://github.com/NexFlare/Quick-Fix",
