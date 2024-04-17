@@ -151,6 +151,12 @@
         "description": "A full-stack tourist blogging platform that connects travellers with untapped locations that are not commonly visited by tourists",
         "github": "https://github.com/NexFlare/The-Blog-App",
         "id": "the_blog_app"
+      },
+      {
+        "name": "Go Build Git",
+        "description": "This project is a simplified version of Git, written in Go. It explores the internal mechanics of Git by implementing core functionalities from scratch.",
+        "github": "https://github.com/NexFlare/build-git-go",
+        "id": "own_git"
       }
     ]
   },
